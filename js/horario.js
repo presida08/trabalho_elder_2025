@@ -59,7 +59,7 @@ async function submeterForm() {
         erros.innerHTML = "O campo 'Início do horário' deve ser informado.";
         return;
     }
-    else if  (linha !== "") {
+    if  (linha !== "") {
         await supabase.from("horarios").update(novo).eq("id", linha);
         linha = "";
     }
@@ -72,7 +72,6 @@ async function submeterForm() {
 }
 
 
-// ALTERAR
 function alterar(d) {
     linha = d.id;
 
@@ -87,7 +86,6 @@ function alterar(d) {
 }
 
 
-// EXCLUIR
 async function excluir(id) {
     if (!confirm("Confirma a exclusão?")) return;
 
@@ -97,18 +95,12 @@ async function excluir(id) {
 }
 
 
-// LIMPAR CAMPOS
 function limparCampos() {
     document.getElementById("form").reset();
     erros.innerHTML = "";
     linha = "";
 }
-
- 
-// EVENTOS
 botao.onclick = submeterForm;
 limpar.onclick = limparCampos;
 
-
-// INICIAR
 mostrarTabela();
