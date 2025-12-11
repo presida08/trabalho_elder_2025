@@ -1,0 +1,213 @@
+:root {
+  --bg: #1f1f1f;
+  --card-bg: #2c2c2c;
+  --card-bg-2: #343434;
+  --text: #f3eadc;
+  --accent: #c7a450; 
+  --accent-soft: #e3c98655;
+  --input-bg: #3d3d3d;
+  --border: #5c5c5c;
+  --shadow-1: rgba(0,0,0,0.45);
+  --shadow-2: rgba(0,0,0,0.7);
+}
+
+.light {
+  --bg: #f5eee0;
+  --card-bg: #ffffff;
+  --card-bg-2: #f9f4ec;
+  --text: #2b2b2b;
+  --accent: #e8a2b8;
+  --accent-soft: #e8a2b855;
+  --input-bg: #f3ece3;
+  --border: #d1c8ba;
+  --shadow-1: rgba(0,0,0,0.1);
+  --shadow-2: rgba(0,0,0,0.18);
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: .3s ease;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(145deg, var(--card-bg), var(--card-bg-2));
+  padding: 30px;
+  width: 360px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 25px var(--shadow-1);
+  transition: .3s;
+}
+
+.label-float input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 15px;
+  margin-top: 8px;
+  box-shadow: inset 0 2px 5px var(--shadow-1);
+}
+
+button, .btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  transition: .25s ease;
+  box-shadow: 0 4px 12px var(--accent-soft);
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--accent-soft);
+}
+
+
+#toggleTheme {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  padding: 9px 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 3px 12px var(--shadow-2);
+  transition: .25s ease;
+}
+
+#toggleTheme:hover {
+  transform: scale(1.1);
+}
+
+table.list {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(145deg, var(--card-bg), var(--card-bg-2));
+  border-radius: 14px;
+  overflow: hidden;
+  display: block;
+  overflow-x: auto;
+  box-shadow: 0 8px 25px var(--shadow-1);
+  margin-top: 20px;
+}
+
+table.list thead th {
+  font-weight: 700;
+  padding: 15px;
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+table.list tbody tr {
+  transition: background .2s ease;
+}
+
+table.list tbody tr:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+table.list td, table.list th {
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+}
+
+table.list td input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  box-shadow: inset 0 2px 5px var(--shadow-1);
+}
+
+table.list tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 720px) {
+  table.list td, table.list th {
+    padding: 9px 7px;
+    font-size: 13px;
+  }
+}
+
+.hE {
+  padding: 20px;
+}
+
+#form div {
+  margin-bottom: 18px;
+}
+
+#form label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+#form input[type="time"],
+#form input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 14px;
+  box-shadow: inset 0 2px 5px var(--shadow-1);
+}
+
+#botao, #limpar {
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: .25s;
+}
+
+#botao:hover, #limpar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px var(--accent-soft);
+}
+
+.horario-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; 
+}

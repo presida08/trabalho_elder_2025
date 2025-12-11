@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho de Programação</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<script>
+  const SUPABASE_URL = "https://bfmnmoyiwkxmhzqajnuq.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmbW5tb3lpd2t4bWh6cWFqbnVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzMTcxNDksImV4cCI6MjA4MDg5MzE0OX0.dWm3IwYGKVo_ZENEal7eT1Yf66CWx6hIwZ6smIUn2UE";
+
+  window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+</script>
+
+</head>
+
+<body>
+
+    <button id="toggleTheme" onclick="toggleTheme()">Trocar Tema</button>
+
+    <h1>Trabalho de Programação</h1>
+    <h3>Selecione uma opção</h3>
+
+    <div class="index-wrapper">
+
+        <a class="btn" href="html/cronograma.html">
+            Cronograma Escolar
+        </a>
+
+    </div>
+
+    <script src="js/tema.js"></script>
+</body>
+
+</html>

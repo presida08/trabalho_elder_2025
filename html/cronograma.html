@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Horário Escolar</title>
+    <link rel="shortcut icon" href="../img/crono.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/css.css">
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+    <script>
+        const SUPABASE_URL = "https://bfmnmoyiwkxmhzqajnuq.supabase.co";
+        const SUPABASE_ANON_KEY =
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmbW5tb3lpd2t4bWh6cWFqbnVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzMTcxNDksImV4cCI6MjA4MDg5MzE0OX0.dWm3IwYGKVo_ZENEal7eT1Yf66CWx6hIwZ6smIUn2UE";
+
+        window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    </script>
+</head>
+
+<body class="hE">
+
+    <button id="toggleTheme" onclick="toggleTheme()">Trocar Tema</button>
+
+    <h1 class="titulo">Horário</h1>
+
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div>
+                        <label>Início do horário</label><br>
+                        <input type="time" id="hora" required>
+                    </div>
+
+                    <div><label>Domingo</label> <input type="text" id="domingo"></div>
+                    <div><label>Segunda-feira</label> <input type="text" id="segunda"></div>
+                    <div><label>Terça-feira</label> <input type="text" id="terca"></div>
+                    <div><label>Quarta-feira</label> <input type="text" id="quarta"></div>
+                    <div><label>Quinta-feira</label> <input type="text" id="quinta"></div>
+                    <div><label>Sexta-feira</label> <input type="text" id="sexta"></div>
+                    <div><label>Sábado</label> <input type="text" id="sabado"></div>
+
+                    <div>
+                        <input type="button" value="Gravar" id="botao">
+                        <input type="button" value="Limpar" id="limpar">
+                    </div>
+
+                    <div id="erros"></div>
+                </form>
+            </td>
+
+            <td>
+                <table class="list" id="lista">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Domingo</th>
+                            <th>Segunda</th>
+                            <th>Terça</th>
+                            <th>Quarta</th>
+                            <th>Quinta</th>
+                            <th>Sexta</th>
+                            <th>Sábado</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="../js/horario.js"></script>
+    <script src="../js/tema.js"></script>
+
+</body>
+
+</html>
